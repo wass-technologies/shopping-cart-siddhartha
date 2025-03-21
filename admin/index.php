@@ -1,3 +1,8 @@
+<?php
+include('../includes/db_autoload.inc.php');
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
