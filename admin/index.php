@@ -1,5 +1,13 @@
 <?php
 include('../includes/db_autoload.inc.php');
+
+if(isset($_POST['submit']))
+{
+    if(($_POST['adminemail']=="")||($_POST['adminpassword']==""))
+    {
+        echo '<script>window.alert("Please fill all fileds")</script>';
+    }
+}
 ?>
 
 
@@ -26,20 +34,21 @@ include('../includes/db_autoload.inc.php');
 
                     <h2 class="fw-bold mb-2 text-uppercase">Login</h2>
                     <p class="text-white-50 mb-5">Please enter your login and password!</p>
+                    <form action="" method="POST" class ="bg-dark text-white">
+                        <div data-mdb-input-init class="form-outline form-white mb-4">
+                            <label class="form-label d-flex" for="typeEmailX">Email</label>
+                            <input type="email" id="typeEmailX" class="form-control form-control-lg" name="adminemail"  />
+                        </div>
 
-                    <div data-mdb-input-init class="form-outline form-white mb-4">
-                        <input type="email" id="typeEmailX" class="form-control form-control-lg" />
-                        <label class="form-label" for="typeEmailX">Email</label>
-                    </div>
+                        <div data-mdb-input-init class="form-outline form-white mb-4">
+                        <label class="form-label d-flex" for="typePasswordX">Password</label>
+                            <input type="password" id="typePasswordX" class="form-control form-control-lg" name ="adminpassword" />
+                        </div>
 
-                    <div data-mdb-input-init class="form-outline form-white mb-4">
-                        <input type="password" id="typePasswordX" class="form-control form-control-lg" />
-                        <label class="form-label" for="typePasswordX">Password</label>
-                    </div>
+                        <p class="small mb-5 pb-lg-2"><a class="text-white-50" href="#!">Forgot password?</a></p>
 
-                    <p class="small mb-5 pb-lg-2"><a class="text-white-50" href="#!">Forgot password?</a></p>
-
-                    <button data-mdb-button-init data-mdb-ripple-init class="btn btn-outline-light btn-lg px-5" type="submit">Login</button>
+                        <button data-mdb-button-init data-mdb-ripple-init class="btn btn-outline-light btn-lg px-5" type="submit" name ="submit">Login</button>
+                    </form>
 
                     <div class="d-flex justify-content-center text-center mt-4 pt-1">
                         <a href="#!" class="text-white"><i class="fab fa-facebook-f fa-lg"></i></a>
