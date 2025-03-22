@@ -1,13 +1,6 @@
 <?php
 include('../includes/db_autoload.inc.php');
-
-if(isset($_POST['submit']))
-{
-    if(($_POST['adminemail']=="")||($_POST['adminpassword']==""))
-    {
-        echo '<script>window.alert("Please fill all fileds")</script>';
-    }
-}
+include('includes/login_check.inc.php');
 ?>
 
 
@@ -48,6 +41,11 @@ if(isset($_POST['submit']))
                         <p class="small mb-5 pb-lg-2"><a class="text-white-50" href="#!">Forgot password?</a></p>
 
                         <button data-mdb-button-init data-mdb-ripple-init class="btn btn-outline-light btn-lg px-5" type="submit" name ="submit">Login</button>
+                        <div class="container">
+                            <?php
+                                if (isset($msg)){ echo $msg;}
+                            ?>
+                        </div>
                     </form>
 
                     <div class="d-flex justify-content-center text-center mt-4 pt-1">
@@ -55,7 +53,7 @@ if(isset($_POST['submit']))
                         <a href="#!" class="text-white"><i class="fab fa-twitter fa-lg mx-4 px-2"></i></a>
                         <a href="#!" class="text-white"><i class="fab fa-google fa-lg"></i></a>
                     </div>
-
+                   
                     </div>
 
                     <div>
