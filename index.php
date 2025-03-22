@@ -28,6 +28,7 @@ include ('includes/db_autoload.inc.php');
               <h5 class="card-title">Dell Vostro-14</h5>
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
               <a href="#" class="btn btn-primary">Buy &#8377 1000.99</a>
+              <a href="#" class="btn btn-warning">Add to Cart</a>
             </div>
           </div>
         </div>
@@ -38,6 +39,7 @@ include ('includes/db_autoload.inc.php');
               <h5 class="card-title">Dell Pro 16 Plus</h5>
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
               <a href="#" class="btn btn-primary">Buy &#8377 1100.99</a>
+              <a href="#" class="btn btn-warning">Add to Cart</a>
             </div>
           </div>
         </div>
@@ -48,6 +50,7 @@ include ('includes/db_autoload.inc.php');
               <h5 class="card-title">Dell Pro 14 Premium</h5>
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
               <a href="#" class="btn btn-primary">Buy &#8377 900.99</a>
+              <a href="#" class="btn btn-warning">Add to Cart</a>
             </div>
           </div>
         </div>

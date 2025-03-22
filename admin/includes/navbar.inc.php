@@ -1,16 +1,16 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">ShoppingCart</a>
+            <a class="navbar-brand" href="#">Admin Dashboard</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link active" aria-current="page" href="./dashboard.php">Home</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="#">Features</a>
+                <a class="nav-link" href="./addProduct.php">Add Products</a>
                 </li>
                 <li class="nav-item">
                 <a class="nav-link" href="#">Pricing</a>
@@ -27,8 +27,19 @@
                 </li>
                 <?php if (isset($msg)){ echo 'welcome admin';}?>
             </ul>
-            <form action="" method="POST"><button type="submit" name="logout" class="btn btn-sm btn-danger btn-block"><a href="./logout.inc.php">Logout</a></button></form>
+            <form action="" method="POST"><button type="submit" name="logout" class="btn btn-sm btn-danger btn-block"><a href="./logout.inc.php" class="text-white">Logout</a></button></form>
             </div>
         </div>
     </nav>
 
+<style>
+    .btn
+    {
+        text-color:white;
+    }
+    .btn>a{
+        text-decoration: none;
+        text-color:white;
+    }
+
+</style>
