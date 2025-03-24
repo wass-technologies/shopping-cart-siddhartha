@@ -1,13 +1,8 @@
 <?php
-include('../includes/db_autoload.inc.php');
+include('../../includes/db_autoload.inc.php');
 
+session_start();
+session_destroy();
 
-if(isset($_POST['logout']))
-{
-    // echo $conn->error();
-    echo '<script>location.href ="../index.php"</script>';
-
-    // echo "Clicked on logouot";
-}
-
+echo '<script>location.href="../index.php"</script>';
 ?>

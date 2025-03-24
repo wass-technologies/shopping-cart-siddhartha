@@ -1,29 +1,38 @@
 <?php
-
-if(isset($_POST['submit']))
+session_start();
+if(!isset($_SESSION['adminemail']))
 {
-    if(($_POST['adminemail']=="")||($_POST['adminpassword']==""))
+    if(isset($_POST['submit']))
     {
-        echo '<script>window.alert("Please fill all fileds")</script>';
-    }
-    else
-    {
-        $adminemail=$_POST['adminemail'];
-        $adminpassword=$_POST['adminpassword'];
-
-        $sql ="SELECT * FROM admin_db WHERE adminemail ='".$adminemail."' AND adminpassword = '".$adminpassword."'";
-        $result =$conn->query($sql);
-
-        if($row=$result->num_rows ==1)
+        if(($_POST['adminemail']=="")||($_POST['adminpassword']==""))
         {
-            echo '<script>location.href="dashboard.php"</script>';
+            echo '<script>window.alert("Please fill all fileds")</script>';
         }
         else
         {
-            // echo "In-vlaid credentials";
-            $msg ='<div class="alert alert-warning mt-2" role="alert">Wrong Credientials</div>';
+            $adminemail=$_POST['adminemail'];
+            $adminpassword=$_POST['adminpassword'];
+
+            $sql ="SELECT * FROM admin_db WHERE adminemail ='".$adminemail."' AND adminpassword = '".$adminpassword."'";
+            $result =$conn->query($sql);
+
+            if($row=$result->num_rows ==1)
+            {
+                $_SESSION['adminemail']=$adminemail;
+                $_SESSION['isLogin']=TRUE;
+                echo '<script>location.href="dashboard.php"</script>';
+            }
+            else
+            {
+                $msg ='<div class="alert alert-warning mt-2" role="alert">Wrong Credientials</div>';
+            }
         }
     }
+
+}
+else
+{
+    echo '<script>location.href="dashboard.php"</script>';
 }
 
 ?>

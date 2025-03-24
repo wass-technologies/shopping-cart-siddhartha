@@ -1,6 +1,14 @@
 <?php
-    include('../includes/db_autoload.inc.php');
+  include('../includes/db_autoload.inc.php');
 
+  if($_SESSION['isLogin'])
+  {
+    echo '<script>window.alert("This is add product page")</script>';
+  }
+  else
+  {
+    echo '<script>location.href="dashboard.php"</script>';
+  }
 ?>
 
 

@@ -27,7 +27,9 @@
                 </li>
                 <?php if (isset($msg)){ echo 'welcome admin';}?>
             </ul>
-            <form action="" method="POST"><button type="submit" name="logout" class="btn btn-sm btn-danger btn-block"><a href="./logout.inc.php" class="text-white">Logout</a></button></form>
+            <form action="" method="POST">
+                <button type="submit" class="btn btn-danger btn-sm btn-block"><a href="./includes/logout.inc.php" class="text-white">Logout</a></button>
+            </form>
             </div>
         </div>
     </nav>
