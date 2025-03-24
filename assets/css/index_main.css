@@ -1,0 +1,13 @@
+footer
+{
+    background-color: rgb(136, 197, 204);
+    display: block;
+    position:relative;
+    margin-top: 38vh;
+}
+
+footer button .btn
+{
+    text-decoration: none;
+    text-align: center center;
+}

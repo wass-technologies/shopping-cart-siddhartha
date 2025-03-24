@@ -1,5 +1,25 @@
 <?php
 include ('../includes/db_autoload.inc.php');
+session_start();
+if(isset($_SESSION['isLogin']))
+{
+  $adminemail= $_SESSION['adminemail'];
+}
+else{
+  echo '<script>location.href="index.php"</script>';
+}
+
+if(isset($_POST['admin_page']))
+{
+  if(isset($_SESSION['isLogin']))
+  {
+    echo '<script>window.alert("Returned to Admin dashboard")</script>';
+  }
+  else
+  {
+    echo '<script>location.href="index.php"</script>';
+  }
+}
 
 ?>
 

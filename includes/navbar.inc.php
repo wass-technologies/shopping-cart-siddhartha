@@ -26,6 +26,12 @@
                 </ul>
                 </li>
             </ul>
+                <?php
+                    if(isset($msg))
+                    {
+                        echo $msg;
+                    }
+                ?>
             </div>
         </div>
     </nav>

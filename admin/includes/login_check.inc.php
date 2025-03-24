@@ -21,6 +21,7 @@ if(!isset($_SESSION['adminemail']))
                 $_SESSION['adminemail']=$adminemail;
                 $_SESSION['isLogin']=TRUE;
                 echo '<script>location.href="dashboard.php"</script>';
+                
             }
             else
             {

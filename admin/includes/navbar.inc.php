@@ -20,12 +20,12 @@
                     Dropdown link
                 </a>
                 <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="../index.php">Check Mainpage</a></li>
                     <li><a class="dropdown-item" href="#">Another action</a></li>
                     <li><a class="dropdown-item" href="#">Something else here</a></li>
                 </ul>
                 </li>
-                <?php if (isset($msg)){ echo 'welcome admin';}?>
+                
             </ul>
             <form action="" method="POST">
                 <button type="submit" class="btn btn-danger btn-sm btn-block"><a href="./includes/logout.inc.php" class="text-white">Logout</a></button>
