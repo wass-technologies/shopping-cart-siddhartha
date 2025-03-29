@@ -28,51 +28,9 @@ if(isset($_SESSION['isLogin']))
     <!-- start for cards of products -->
      <div class="container mt-4">
       <div class="row">
-        <div class="col-lg-3 col-md-6">
-          <div class="card" style="width: 18rem;">
-            <img src="assets/images/dell_vostro14.avif" class="card-img-top mt-2" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Dell Vostro-14</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Buy &#8377 1000.99</a>
-              <a href="#" class="btn btn-warning">Add to Cart</a>
-            </div>
-          </div>
+
+          <?php require('includes/showProduct.inc.php');?>
         </div>
-        <div class="col-lg-3 col-md-6">
-          <div class="card" style="width: 18rem;">
-            <img src="assets/images/dell_pro16.avif" class="card-img-top mt-2" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Dell Pro 16 Plus</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Buy &#8377 1100.99</a>
-              <a href="#" class="btn btn-warning">Add to Cart</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6">
-          <div class="card" style="width: 18rem;">
-            <img src="assets/images/dell_pro14.avif" class="card-img-top mt-2" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Dell Pro 14 Premium</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Buy &#8377 900.99</a>
-              <a href="#" class="btn btn-warning">Add to Cart</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6">
-          <div class="card" style="width: 18rem;">
-            <img src="assets/images/dell_pro14.avif" class="card-img-top mt-2" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Dell Pro 14 Premium</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Buy &#8377 900.99</a>
-              <a href="#" class="btn btn-warning">Add to Cart</a>
-            </div>
-          </div>
-        </div>
-      </div>
      </div>
      <!-- end of cards of products -->
       <!-- start of footer -->
