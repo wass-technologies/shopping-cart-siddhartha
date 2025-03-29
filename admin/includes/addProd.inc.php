@@ -11,9 +11,9 @@
    }
    else
    {
-     $productName=$_POST['productName'];
-     $productPrice=$_POST['productPrice'];
-     $productDescription=$_POST['productDescription'];
+     $productName=$conn->real_escape_string($_POST['productName']);
+     $productPrice=$conn->real_escape_string($_POST['productPrice']);
+     $productDescription=$conn->real_escape_string($_POST['productDescription']);
      // image upload
      $productImage=$_FILES['productImage']['name'];
      $tmp_productImage=$_FILES['productImage']['tmp_name'];
@@ -36,10 +36,12 @@
        // check if the supported file is uploaded or not
        if(in_array($extension[1],$permit_ext))
        {
-         move_uploaded_file($tmp_productImage.'assests/productImages/'.$productImage);
-         $sql="INSERT INTO productadd_tb(productImage,productName,productDescription,productPrice)VALUES('$productImage','$productName','$productDescription','$productPrice')";
+      //    print_r($extension);
+         move_uploaded_file($tmp_productImage,"./assets/productImages/".$productImage);
+         $sql="INSERT INTO productadd_tb(productName, productPrice, productDescription, productImage)
+               VALUES('$productName','$productPrice','$productDescription','$productImage')";
 
-         if($conn->query($sql))
+         if($conn->query($sql)===TRUE)
          {
            $msg='<div class="alert alert-success alert-dismissible fade show" role="alert">
            <strong>Product Added</strong><button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
@@ -55,6 +57,7 @@
          $msg='<div class="alert alert-warning alert-dismissible fade show" role="alert">
          Not the supported Image format<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
          </div>';
+
        }
      }
    }

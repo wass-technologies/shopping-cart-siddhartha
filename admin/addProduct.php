@@ -25,10 +25,14 @@
   <style>
     .container
     {
-      margin-left:200px;
-      /* background-color: grey; */
-      padding:20px;
-      margin-top:40px;
+      margin-top:15vh;     
+      /* margin-left:35vh;  */
+      /* background-color:grey; */
+      display: inline-block;
+    }
+    .col
+    {
+      margin-left:55vh;
     }
   </style>
   <body>
@@ -37,9 +41,9 @@
 
   <!-- start of form to add to product -->
    <div class="container">
-    <div class="row">
+    <!-- <div class="row"> -->
       <div class="row">
-        <div class="col-lg-6">
+        <div class="col col-lg-6 bg-light ml-5">
           <form action="" method="post" class="form-group" enctype="multipart/form-data">
             <label for="productName" class="form-label">Enter Product Name</label>
             <input type="text" name="productName" placeholder="Provide the product name" class="form-control">
