@@ -1,5 +1,5 @@
 <?php
-require('../includes/db_autoload.inc.php');
+include('../includes/db_autoload.inc.php');
 ?>
 
 

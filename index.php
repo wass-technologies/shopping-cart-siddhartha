@@ -30,6 +30,9 @@ if(isset($_SESSION['isLogin']))
       <div class="row">
 
           <?php require('includes/showProduct.inc.php');?>
+          <div class="col-g-3 col-md-6">
+            <?php if(isset($msg)){echo $msg;}?>
+          </div>
         </div>
      </div>
      <!-- end of cards of products -->
