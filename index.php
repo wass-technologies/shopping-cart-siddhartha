@@ -28,7 +28,6 @@ if(isset($_SESSION['isLogin']))
     <!-- start for cards of products -->
      <div class="container mt-4">
       <div class="row">
-
           <?php require('includes/showProduct.inc.php');?>
           <div class="col-g-3 col-md-6">
             <?php if(isset($msg)){echo $msg;}?>

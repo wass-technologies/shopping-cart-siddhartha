@@ -44,7 +44,7 @@ include('totalAmount.inc.php');
                 <div>
                   <strong>Total amount</strong>
                   <strong>
-                    <p class="mb-0">(including VAT)</p>
+                    <p class="mb-0">(including GST)</p>
                   </strong>
                 </div>
                 <span><strong>₹ <?php if(isset($Total_price)){ echo $Total_price;}?></strong></span>

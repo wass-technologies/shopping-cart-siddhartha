@@ -1,5 +1,5 @@
 <?php
-
+// session_start();
 $sql ="SELECT * FROM addtocart_tb";
 $res1 = $conn->query($sql);
 // initilize the $msg variable so that the each msg content is not overwritten in the loop
@@ -32,12 +32,12 @@ if($res1->num_rows>0)
                                 <div class="card-body">
                                     <h5 class="card-title">'.$productName.'</h5>
                                     <p class ="card-text" name="price">Price ₹'.$productPrice.'</p>
-                                    <form action ="" metho="POST">
+                                    <form action ="" method="POST">
                                         <div class="input-group mb-3" style="width:130px">
                                             <button class="input-group-text decrement-btn">-</button>
-                                            <input type="number" class="form-control bg-white text-center input-qty" value="'.$productQuantity.'">
+                                            <input type="number" class="form-control bg-white text-center" value="'.$productQuantity.'" name="input-qty">
                                             <button class="input-group-text increment-btn">+</button>
-                                            <input type="hidden" name="sno" value="'.$sNo.'">
+                                            <input type="hidden" name="sNo" value="'.$sNo.'">
                                             <br>
                                             <button type="submit" class="btn btn-sm btn-success text-white mt-3" name="qty">Confirm</button>
                                         </div>
@@ -58,5 +58,7 @@ if($res1->num_rows>0)
 
 
 include('./updateQty.inc.php');
+
+
 
 
