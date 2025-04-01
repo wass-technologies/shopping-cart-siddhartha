@@ -1,13 +1,13 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">ShoppingCart</a>
+            <a class="navbar-brand" href="">ShoppingCart</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link active" aria-current="page" href="../index.php">Home</a>
                 </li>
                 <li class="nav-item">
                 <a class="nav-link" href="./includes/addToCart.inc.php">To Cart</a>
@@ -26,12 +26,7 @@
                 </ul>
                 </li>
             </ul>
-                <?php
-                    if(isset($msg))
-                    {
-                        echo $msg;
-                    }
-                ?>
+                
             </div>
         </div>
     </nav>
