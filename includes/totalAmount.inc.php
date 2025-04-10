@@ -7,3 +7,5 @@ $result = $conn->query($sql);
 $row=$result->fetch_assoc();
 
 $Total_price = $row['Total_price'];
+
+?>

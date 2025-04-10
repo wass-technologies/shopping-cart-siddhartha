@@ -1,7 +1,7 @@
 <?php
 
  // start of code to add new product to database
- if(isset($_POST['addProduct']))
+ if($_SERVER['REQUET_METHOD']=='POST' && isset($_POST['addProduct']))
  {
    if(($_POST['productName']=="")||($_POST['productPrice']=="")||($_POST['productDescription']=="")||empty($_FILES['productImage']))
    {

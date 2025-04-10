@@ -38,7 +38,7 @@ else
 }
 
 
-if (isset($_POST['tocart']))
+if ($_SERVER['REQUEST_METHOD']=='POST' && isset($_POST['tocart']))
 {
     $productId = $_POST['productId'];
     // this code is fetch the price of the item that is to be added

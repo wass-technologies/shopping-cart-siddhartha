@@ -2,7 +2,7 @@
 session_start();
 if(!isset($_SESSION['adminemail']))
 {
-    if(isset($_POST['submit']))
+    if($_SERVER['REQUST_METHOD']=='POST' && isset($_POST['submit']))
     {
         if(($_POST['adminemail']=="")||($_POST['adminpassword']==""))
         {
