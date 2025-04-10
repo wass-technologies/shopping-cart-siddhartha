@@ -12,7 +12,8 @@ if ($_SERVER['REQUEST_METHOD']=='POST' && isset($_POST['qty']))
 
         if($conn->query($sql)===TRUE)
         {
-            echo '<script>location.href="addToCart.inc.php"</script>';
+            // echo '<script>location.href="addToCart.inc.php"</script>';
+            header('Location: addToCart.inc.php');
         }
     }
 }

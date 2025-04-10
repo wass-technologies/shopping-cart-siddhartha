@@ -20,7 +20,8 @@ if(!isset($_SESSION['adminemail']))
             {
                 $_SESSION['adminemail']=$adminemail;
                 $_SESSION['isLogin']=TRUE;
-                echo '<script>location.href="dashboard.php"</script>';
+                // echo '<script>location.href="dashboard.php"</script>';
+                header('Location: dashboard.php');
                 
             }
             else
@@ -33,7 +34,8 @@ if(!isset($_SESSION['adminemail']))
 }
 else
 {
-    echo '<script>location.href="dashboard.php"</script>';
+    // echo '<script>location.href="dashboard.php"</script>';
+    header('Location : dashboard.php');
 }
 
 ?>

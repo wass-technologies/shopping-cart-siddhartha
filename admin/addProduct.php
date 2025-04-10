@@ -7,7 +7,8 @@
   }
   else
   {
-    echo '<script>location.href="dashboard.php"</script>';
+    // echo '<script>location.href="dashboard.php"</script>';
+    header('Location: dashboard.php');
   }
 // including the sql query
   include('includes/addProd.inc.php');

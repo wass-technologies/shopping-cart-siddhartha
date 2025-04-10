@@ -6,7 +6,8 @@ if(isset($_SESSION['isLogin']))
   $adminemail= $_SESSION['adminemail'];
 }
 else{
-  echo '<script>location.href="index.php"</script>';
+  // echo '<script>location.href="index.php"</script>';
+  header('Location: index.php');
 }
 
 if(isset($_POST['admin_page']))
@@ -17,7 +18,8 @@ if(isset($_POST['admin_page']))
   }
   else
   {
-    echo '<script>location.href="index.php"</script>';
+    // echo '<script>location.href="index.php"</script>';
+    header('Location: index.php');
   }
 }
 
